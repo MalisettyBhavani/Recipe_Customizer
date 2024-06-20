@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ recipe.name }}</title>
+</head>
+<body>
+    <h1>{{ recipe.name }}</h1>
+    <p>Servings: {{ recipe.servings }}</p>
+    <h2>Ingredients</h2>
+    <p>{{ recipe.ingredients }}</p>
+    <h2>Instructions</h2>
+    <p>{{ recipe.instructions }}</p>
+    <a href="{% url 'recipe_edit' pk=recipe.pk %}">Edit</a>
+    <a href="{% url 'recipe_list' %}">Back to list</a>
+</body>
+</html>

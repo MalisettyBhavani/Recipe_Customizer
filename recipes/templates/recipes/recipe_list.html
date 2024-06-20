@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipes</title>
+</head>
+<body>
+    <h1>Recipes</h1>
+    <a href="{% url 'recipe_new' %}">Add new recipe</a>
+    <ul>
+        {% for recipe in recipes %}
+            <li><a href="{% url 'recipe_detail' pk=recipe.pk %}">{{ recipe.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
